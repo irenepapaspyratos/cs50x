@@ -1,0 +1,25 @@
+Times:
+
+10 simulations: 0m0.029s
+100 simulations: 0m0.028s
+1000 simulations: 0m0.043s
+10000 simulations: 0m0.098s
+100000 simulations: 0m0.737s
+1000000 simulations: 0m7.229s
+
+Questions:
+
+Which predictions, if any, proved incorrect as you increased the number of simulations?:
+
+1.
+After seeing the first result with 10 simulations, one could have thought, that each simulation costs 0.0029 seconds.
+That would have resulted in 0.290 seconds for 100 simulations due to linear cost increase - what is wrong.
+2.
+After 100 simulations you could be tricked to think, the needed time will always nearly stay the same due to constant costs - what is also wrong.
+3.
+After seeing all costs in relation to N, the needed time seems to increase exponentially with the asymptote lying somewhat under 0.29 when drawing the graph for this particular tested times.
+
+Suppose you're charged a fee for each second of compute time your program uses.
+After how many simulations would you call the predictions "good enough"?:
+
+As the needed time for 100000 simulations doesn't exceed 1 second, this number should be "goog enough" regarding fees per second.

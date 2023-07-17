@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+
+        <title>Trivia!</title>
+
+    </head>
+
+    <body class="center">
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- Multiple choice question -->
+                <h3 class="mb">What age reached the oldest cat ever?</h3>
+                <span id="part_1"></span>
+                <br>
+                <div id="d1">
+                    <button>24</button>
+                    <button>31</button>
+                    <button>19</button>
+                    <button>38</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- Free response question -->
+                <h3 class="mb">What is the most expensive dog breed?</h3>
+                <span id="part_2"></span>
+                <br>
+                <div id="d2">
+                    <input type="text">
+                    <button>Check Answer</button>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+
+            window.onload = function () {
+
+                let answer1 = 38;
+                let answer2 = 'samoyed';
+
+                let b = document.querySelector('#d1').querySelectorAll('button');
+                let b_len = b.length;
+
+                let tfree = document.querySelector('input');
+                let tfree_color = tfree.style.backgroundColor;
+                let bfree = document.querySelector('#d2').querySelector('button');
+                let b_color = bfree.style.backgroundColor;
+
+                let span1 = document.querySelector('#part_1');
+                let span2 = document.querySelector('#part_2');
+
+
+                for (let i = 0; i < b_len; i++)
+                {
+                    b[i].addEventListener('click', () => {
+                        for (var j = 0; j < b_len; j++)
+                        {
+                            if (i != j)
+                            {
+                                b[j].style.backgroundColor = b_color;
+                            }
+                            else
+                            {
+                                if (b[j].innerHTML == answer1)
+                                {
+                                    b[j].style.backgroundColor = 'green';
+                                    span1.innerHTML = 'Correct!';
+                                }
+                                else
+                                {
+                                    b[j].style.backgroundColor = 'red';
+                                    span1.innerHTML = 'Incorrect';
+                                }
+                            }
+                        }
+                    });
+                }
+
+                tfree.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter')
+                    {
+                        bfree.click();
+                    }
+                    else
+                    {
+                        tfree.style.backgroundColor = tfree_color;
+                        span2.innerHTML = '';
+                    }
+                });
+
+                bfree.addEventListener('click', () => {
+                    if (tfree.value.toLowerCase() == answer2)
+                    {
+                        tfree.style.backgroundColor = 'green';
+                        span2.innerHTML = 'Correct!';
+                    }
+                    else
+                    {
+                        tfree.style.backgroundColor = 'red';
+                        span2.innerHTML = 'Incorrect';
+                    }
+                });
+
+            };
+
+        </script>
+    </body>
+</html>

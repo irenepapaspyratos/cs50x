@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <h2>YOUR PORTFOLIO</h2>
+    <br>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Current Price</th>
+            <th>Shares</th>
+            <th>Current Value</th>
+        </thead>
+        <tbody>
+            {% for s in stocks %}
+            <tr>
+                <td class="text-left">{{ s.name }}</td>
+                <td class="text-center">{{ s.symbol }}</td>
+                <td class="text-right">{{ s.price }}</td>
+                <td class="text-right">{{ s.shares }}</td>
+                <td class="text-right">{{ s.value }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot class="pt4">
+            <tr>
+                <td class="text-left">SUM</td>
+                <td class="text-center"></td>
+                <td class="text-right"></td>
+                <td class="text-right"></td>
+                <td class="text-right">{{ complete }}</td>
+            </tr>
+        </tfoot>
+    </table>
+    <br><br>
+    <h5>Increase your cash!</h5>
+    <form action="/" method="post">
+        <div class="form-group">
+            <input type="text" name="cash" placeholder="Amount of Cash">
+        </div>
+        <button class="btn btn-primary" type="submit">Increase</button>
+    </form>
+{% endblock %}

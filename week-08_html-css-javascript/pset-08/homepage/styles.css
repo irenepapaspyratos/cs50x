@@ -1,0 +1,108 @@
+/* Header */
+.hr {
+    width: 80%;
+    border-top: 1px solid cornflowerblue;
+    margin-top: 0;
+}
+
+
+/* Navigation */
+.nav {
+    max-width: 30%;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    padding: 0.5em 0;
+}
+
+.nav-link {
+    font-size: inherit;
+    color: white;
+    background-color: #0000c5;
+    margin: 0.5em;
+    padding: 0.5em 1.5em;
+}
+
+.nav-link.active {
+    background: white !important;
+    color: #0000c5 !important;
+}
+
+.nav-link:hover {
+    color: #aee1ff !important;
+}
+
+
+
+/* Body */
+body {
+    min-width: 315px;
+    max-width: 100%;
+    height: 100%;
+    color: #0000c5;
+}
+
+head {
+    height: 24vh;
+}
+
+main {
+    width: 100%;
+    display: grid;
+}
+
+footer {
+    height: 15vh;
+    bottom:0;
+}
+
+
+h1 {
+    font-size: 150%;
+    margin: 1em;
+}
+
+p {
+    height: 3vh;
+}
+
+a {
+    font-size: larger;
+}
+
+
+input {
+  outline: 2px solid lightblue;
+  box-shadow: none;
+  font-size: 2em;
+  margin: 0.2em;
+}
+
+table {
+    text-align: left;
+    margin: auto;
+}
+
+td {
+    padding: 0.2em;
+}
+
+
+.background_main{
+    background-image: linear-gradient(#0037ff, white);
+    background-attachment: fixed;
+}
+
+.row{
+    margin: auto;
+    flex-direction: column;
+}
+
+.td-cl {
+    padding-left: 0.4em;
+}
+
+.image-fit {
+    max-height: 45vh;
+    max-width: 90%;
+    margin: 1em;
+}

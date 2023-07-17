@@ -1,0 +1,70 @@
+sort1 uses: Bubble Sort
+
+How do you know?:
+
+reversed50000.txt:
+real    0m14.335s
+user    0m5.032s
+sys     0m0.088s
+
+sorted50000.txt:
+real    0m5.381s
+user    0m0.020s
+sys     0m0.089s
+
+The Selection as well as the Merge Sort should use about the same time for either sorted or not values,
+hence sort1 must be the Bubble Sort.
+
+
+
+sort2 uses: Merge Sort
+
+How do you know?:
+
+reversed50000.txt:
+real    0m5.736s
+user    0m0.041s
+sys     0m0.066s
+
+sorted50000.txt:
+real    0m6.514s
+user    0m0.050s
+sys     0m0.070s
+
+The Selection as well as the Merge Sort should use about the same time for either sorted or not values,
+hence sort1 must be the Bubble Sort.
+
+sorted5000.txt:
+real    0m0.009s
+user    0m0.000s
+sys     0m0.009s
+
+Although the first two tests already showed, that sort3 is slower than sort2,
+this second test shows even better, that sort3 must be the Selection Sort and sort2 the Merge Sort.
+
+
+
+sort3 uses: Selection Sort
+
+How do you know?:
+
+reversed50000.txt:
+real    0m9.615s
+user    0m2.655s
+sys     0m0.084s
+
+sorted50000.txt:
+real    0m8.273s
+user    0m2.603s
+sys     0m0.076s
+
+The Selection as well as the Merge Sort should use about the same time for either sorted or not values,
+hence sort1 must be the Bubble Sort.
+
+sorted5000.txt:
+real    0m0.034s
+user    0m0.022s
+sys     0m0.012s
+
+Although the first two tests showed, that sort3 is slower than sort2,
+this second test shows even better, that sort3 must be the Selection Sort and sort2 the Merge Sort.

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote Result
+{% endblock %}
+
+{% block main %}
+    <h2>RESULT OF YOUR REQUEST</h2>
+    <br>
+    <table>
+        <tbody>
+            <tr>
+                <td class="text-left">Requested Symbol:</td>
+                <td class="text-right">{{ show.symbol }}</td>
+            </tr>
+            <tr>
+                <td class="text-left">Regular Name:</td>
+                <td class="text-right">{{ show.name }}</td>
+            </tr>
+            <tr>
+                <td class="text-left">Current Price:</td>
+                <td class="text-right">{{ show.price }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
